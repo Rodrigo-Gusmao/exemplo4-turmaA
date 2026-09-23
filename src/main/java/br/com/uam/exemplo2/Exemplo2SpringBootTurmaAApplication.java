@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class Exemplo2SpringBootTurmaAApplication {
-
+//morre fessor
 	public static void main(String[] args) {
 		SpringApplication.run(Exemplo2SpringBootTurmaAApplication.class, args);
 	}
