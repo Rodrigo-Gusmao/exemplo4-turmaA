@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-Exemplo2SpringBootTurmaAApplication<exemplo2-spring-boot-turmaA>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "br.com.uam.exemplo2.Exemplo2SpringBootTurmaAApplication",
+            "projectName": "exemplo2-spring-boot-turmaA",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

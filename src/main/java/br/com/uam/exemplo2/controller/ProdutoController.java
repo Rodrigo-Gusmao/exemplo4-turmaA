@@ -4,6 +4,7 @@ import java.net.URI;
 import java.util.List;
 import java.util.Optional;
 
+import org.aspectj.internal.lang.annotation.ajcDeclareAnnotation;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,6 +17,8 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import br.com.uam.exemplo2.model.Produto;
 import br.com.uam.exemplo2.repository.ProdutoRepository;
+import jakarta.validation.Valid;
+
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.PutMapping;
 
@@ -32,7 +35,7 @@ public class ProdutoController {
     }
 
     @PostMapping
-    public ResponseEntity<Produto> criarProduto(@RequestBody Produto produto) {
+    public ResponseEntity<Produto> criarProduto(@RequestBody @Valid Produto produto) {
 
         Produto produtoSalvo = repository.save(produto);
 
@@ -63,7 +66,7 @@ public class ProdutoController {
     
     @PutMapping("/{id}")
     public ResponseEntity<Produto> atualizarProduto(@PathVariable Long id, 
-                                                    @RequestBody Produto produtoAtualizado) {
+                                                    @RequestBody @Valid Produto produtoAtualizado) {
 
         Optional<Produto> produtoBuscado = repository.findById(id);
 
